@@ -15,6 +15,12 @@
         "Bucket": {
             "Type": "AWS::S3::Bucket",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Comment": "The suppressed guard rules are not vital for this sample but should be considered for production infrastructure",
                 "guard": {
                     "SuppressedRules": [

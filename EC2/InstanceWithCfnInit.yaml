@@ -64,3 +64,6 @@ Resources:
         Fn::Sub: |-
           #!/bin/bash
           /opt/aws/bin/cfn-signal -e $? --stack ${AWS::StackName} --resource Instance --region ${AWS::Region}
+      Tags:
+        - Key: git_org
+          Value: mozesster

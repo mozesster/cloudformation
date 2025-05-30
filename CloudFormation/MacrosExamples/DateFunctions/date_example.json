@@ -111,6 +111,10 @@
                                 }
                             ]
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             }

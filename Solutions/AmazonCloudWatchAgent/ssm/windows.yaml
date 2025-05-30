@@ -114,3 +114,6 @@ Resources:
             cfn-signal.exe -e %errorlevel% --stack ${AWS::StackId} --resource EC2Instance --region ${AWS::Region}
              </script>
           - ssmkey: !Ref SSMKey
+      Tags:
+        - Key: git_org
+          Value: mozesster

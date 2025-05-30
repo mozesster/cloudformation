@@ -67,3 +67,5 @@ Resources:
                   Date: !Ref Date
                   Date2: !Ref Date2
                   Operation: Days
+        - Key: git_org
+          Value: mozesster

@@ -14,7 +14,9 @@ Resources:
     Properties:
       RepositoryName: !Sub ${AWS::StackName}-repo
       RepositoryDescription: !Sub This is a repository for the ${AWS::StackName} project.
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   PipelineS3Bucket:
     Type: AWS::S3::Bucket
     Metadata:
@@ -35,7 +37,9 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   CodeBuildRole:
     Type: AWS::IAM::Role
     Properties:
@@ -83,7 +87,9 @@ Resources:
                   - codebuild:*
                 Resource:
                   - !Sub arn:${AWS::Partition}:codebuild:${AWS::Region}:${AWS::AccountId}:report-group/${AWS::StackName}*
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   AppBuild:
     Type: AWS::CodeBuild::Project
     Properties:
@@ -103,7 +109,9 @@ Resources:
       Source:
         Type: CODEPIPELINE
         BuildSpec: codebuild-app-build.yml
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   AppDeploy:
     Type: AWS::CodeBuild::Project
     Properties:
@@ -123,6 +131,9 @@ Resources:
       Source:
         Type: CODEPIPELINE
         BuildSpec: codebuild-app-deploy.yml
+      Tags:
+        - Key: git_org
+          Value: mozesster
 
 Outputs:
   CodeCommitName:

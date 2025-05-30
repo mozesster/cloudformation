@@ -148,6 +148,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "Policies": [
@@ -227,6 +231,10 @@
                     {
                         "Key": "Name",
                         "Value": "VPC Flow Logs CloudWatch"
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             }

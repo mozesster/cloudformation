@@ -11,6 +11,12 @@
         "KmsKey": {
             "Type": "AWS::KMS::Key",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "EnableKeyRotation": true,
                 "KeyPolicy": {
                     "Version": "2012-10-17",
@@ -48,6 +54,12 @@
             "DeletionPolicy": "Delete",
             "Type": "AWS::S3::Bucket",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "guard": {
                     "SuppressedRules": [
                         "S3_BUCKET_LOGGING_ENABLED",
@@ -129,6 +141,12 @@
         "ReplicationRole": {
             "Type": "AWS::IAM::Role",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "RoleName": {
                     "Fn::Sub": "${AWS::StackName}-${AccountIdDestination}-role"
                 },

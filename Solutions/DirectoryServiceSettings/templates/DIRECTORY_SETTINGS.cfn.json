@@ -308,6 +308,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             },
@@ -343,6 +347,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             },
@@ -380,6 +388,10 @@
                         "Value": {
                             "Ref": "DirectoryID"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             }
@@ -387,6 +399,12 @@
         "DirectorySettingsLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "cfn_nag": {
                     "rules_to_suppress": [
                         {
@@ -501,6 +519,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "Policies": [

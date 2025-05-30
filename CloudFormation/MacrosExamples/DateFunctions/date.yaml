@@ -27,6 +27,9 @@ Resources:
                 Action:
                   - logs:*
                 Resource: arn:aws:logs:*:*:*
+      Tags:
+        - Key: git_org
+          Value: mozesster
 
   # Function we use for transformaton
   TransformFunction:
@@ -42,6 +45,9 @@ Resources:
       Handler: index.handler
       Runtime: python3.11
       Role: !GetAtt TransformExecutionRole.Arn
+      Tags:
+        - Key: git_org
+          Value: mozesster
 
   # Tranform function permissions
   TransformFunctionPermissions:

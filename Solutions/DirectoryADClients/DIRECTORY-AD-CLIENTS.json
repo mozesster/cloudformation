@@ -426,6 +426,10 @@
                         "Value": {
                             "Ref": "DomainMember1NetBIOSName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "BlockDeviceMappings": [
@@ -486,6 +490,10 @@
                         "Value": {
                             "Ref": "DomainMember2NetBIOSName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "BlockDeviceMappings": [
@@ -552,6 +560,10 @@
                         "Value": {
                             "Ref": "DirectoryName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "BlockDeviceMappings": [
@@ -612,6 +624,10 @@
                         "Value": {
                             "Ref": "DomainMember4NetBIOSName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "BlockDeviceMappings": [

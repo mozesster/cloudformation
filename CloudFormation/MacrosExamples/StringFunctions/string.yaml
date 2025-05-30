@@ -23,7 +23,9 @@ Resources:
                 Action:
                   - logs:*
                 Resource: arn:aws:logs:*:*:*
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   TransformFunction:
     Type: AWS::Lambda::Function
     Metadata:
@@ -36,7 +38,9 @@ Resources:
       Handler: index.handler
       Runtime: python3.12
       Role: !GetAtt TransformExecutionRole.Arn
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   TransformFunctionPermissions:
     Type: AWS::Lambda::Permission
     Metadata:
@@ -47,7 +51,6 @@ Resources:
       Action: lambda:InvokeFunction
       FunctionName: !GetAtt TransformFunction.Arn
       Principal: cloudformation.amazonaws.com
-
   Transform:
     Type: AWS::CloudFormation::Macro
     Properties:

@@ -24,7 +24,9 @@ Resources:
               AWS: !Sub arn:${AWS::Partition}:iam::${AWS::AccountId}:root
             Action: kms:*
             Resource: '*'
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   KmsKeyAlias:
     Type: AWS::KMS::Alias
     Properties:
@@ -76,7 +78,9 @@ Resources:
             SourceSelectionCriteria:
               SseKmsEncryptedObjects:
                 Status: Enabled
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   ReplicationRole:
     Type: AWS::IAM::Role
     Properties:
@@ -126,3 +130,6 @@ Resources:
                 Condition:
                   StringEquals:
                     kms:RequestAlias: !Sub alias/${AWS::StackName}-${AccountIdDestination}-kms-key
+      Tags:
+        - Key: git_org
+          Value: mozesster

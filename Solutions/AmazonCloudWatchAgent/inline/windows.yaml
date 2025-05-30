@@ -128,3 +128,6 @@ Resources:
           cfn-init.exe -v --stack ${AWS::StackId} --resource EC2Instance --region ${AWS::Region} --configsets default
           cfn-signal.exe -e %errorlevel% --stack ${AWS::StackId} --resource EC2Instance --region ${AWS::Region}
           </script>
+      Tags:
+        - Key: git_org
+          Value: mozesster

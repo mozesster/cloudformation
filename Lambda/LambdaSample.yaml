@@ -35,7 +35,9 @@ Resources:
         - arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess
         - arn:aws:iam::aws:policy/AmazonKinesisFullAccess
       Path: /
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   LambdaFunction:
     Type: AWS::Lambda::Function
     Metadata:
@@ -65,6 +67,9 @@ Resources:
         Variables:
           ENV: !Ref EnvName
           TZ: UTC
+      Tags:
+        - Key: git_org
+          Value: mozesster
 
 Outputs:
   LambdaRoleARN:

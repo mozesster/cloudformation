@@ -27,7 +27,13 @@
     "Resources": {
         "SNSTopic": {
             "Type": "AWS::SNS::Topic",
-            "Properties": {}
+            "Properties": {
+        "Tags": [
+          {
+            "Key": "git_org",
+            "Value": "mozesster"
+          }
+        ],}
         },
         "SNSSubscription": {
             "Type": "AWS::SNS::Subscription",

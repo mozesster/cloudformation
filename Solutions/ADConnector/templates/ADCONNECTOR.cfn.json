@@ -435,6 +435,10 @@
                         "Value": {
                             "Fn::Sub": "${DomainNetBiosName}-DomainMembersSG-ADConnector"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             },
@@ -443,6 +447,12 @@
         "ADConnectorLambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "cfn_nag": {
                     "rules_to_suppress": [
                         {
@@ -560,6 +570,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "Policies": [
@@ -750,6 +764,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "Policies": [
@@ -874,6 +892,12 @@
             "UpdateReplacePolicy": "Retain",
             "Type": "AWS::SecretsManager::Secret",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Name": {
                     "Fn::Sub": "aws/directory-services/${ADConnectorResource}/seamless-domain-join"
                 },
@@ -941,6 +965,12 @@
             "UpdateReplacePolicy": "Retain",
             "Type": "AWS::SecretsManager::Secret",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Name": {
                     "Fn::Sub": "ADConnector-ServiceAccount-${DomainNetBiosName}-Domain"
                 },
@@ -1026,6 +1056,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "Policies": [
@@ -1121,6 +1155,10 @@
                         "Value": {
                             "Ref": "DomainDNSName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             },
