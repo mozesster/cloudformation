@@ -35,7 +35,9 @@ Resources:
         BlockPublicPolicy: true
         IgnorePublicAcls: true
         RestrictPublicBuckets: true
-
+      Tags:
+        - Key: git_org
+          Value: mozesster
   BucketPolicy:
     Type: AWS::S3::BucketPolicy
     Properties:

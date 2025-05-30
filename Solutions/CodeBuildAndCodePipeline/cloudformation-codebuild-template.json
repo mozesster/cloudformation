@@ -12,6 +12,12 @@
         "CodeCommitRepo": {
             "Type": "AWS::CodeCommit::Repository",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "RepositoryName": {
                     "Fn::Sub": "${AWS::StackName}-repo"
                 },
@@ -23,6 +29,12 @@
         "PipelineS3Bucket": {
             "Type": "AWS::S3::Bucket",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "guard": {
                     "SuppressedRules": [
                         "S3_BUCKET_DEFAULT_LOCK_ENABLED",
@@ -56,6 +68,12 @@
         "CodeBuildRole": {
             "Type": "AWS::IAM::Role",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "AssumeRolePolicyDocument": {
                     "Statement": [
                         {
@@ -155,6 +173,12 @@
         "AppBuild": {
             "Type": "AWS::CodeBuild::Project",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Name": {
                     "Fn::Sub": "${AWS::StackName}-app-build"
                 },
@@ -188,6 +212,12 @@
         "AppDeploy": {
             "Type": "AWS::CodeBuild::Project",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Name": {
                     "Fn::Sub": "${AWS::StackName}-app-deploy"
                 },

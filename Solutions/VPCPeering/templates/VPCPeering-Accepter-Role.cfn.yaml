@@ -41,6 +41,8 @@ Resources:
       Tags:
         - Key: StackName
           Value: !Ref AWS::StackName
+        - Key: git_org
+          Value: mozesster
       Policies:
         - PolicyName: AcceptVPCPeering
           PolicyDocument:

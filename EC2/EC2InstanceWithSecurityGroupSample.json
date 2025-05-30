@@ -80,6 +80,12 @@
         "EC2Instance": {
             "Type": "AWS::EC2::Instance",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "InstanceType": {
                     "Ref": "InstanceType"
                 },
@@ -110,6 +116,12 @@
         "InstanceSecurityGroup": {
             "Type": "AWS::EC2::SecurityGroup",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "guard": {
                     "SuppressedRules": [
                         "INCOMING_SSH_DISABLED"

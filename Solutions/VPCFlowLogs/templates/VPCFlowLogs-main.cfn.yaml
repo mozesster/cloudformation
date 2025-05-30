@@ -206,8 +206,10 @@ Resources:
         VPCFlowLogsMaxAggregationInterval: !Ref VPCFlowLogsMaxAggregationInterval
         VPCFlowLogsTrafficType: !Ref VPCFlowLogsTrafficType
         VPCID: !Ref VPCID
+      Tags:
+        - Key: git_org
+          Value: mozesster
     Condition: VPCFlowLogsToCloudWatchCondition
-
   VPCFlowLogsS3Stack:
     Type: AWS::CloudFormation::Stack
     Properties:
@@ -221,4 +223,7 @@ Resources:
         VPCFlowLogsMaxAggregationInterval: !Ref VPCFlowLogsMaxAggregationInterval
         VPCFlowLogsTrafficType: !Ref VPCFlowLogsTrafficType
         VPCID: !Ref VPCID
+      Tags:
+        - Key: git_org
+          Value: mozesster
     Condition: VPCFlowLogsToS3Condition

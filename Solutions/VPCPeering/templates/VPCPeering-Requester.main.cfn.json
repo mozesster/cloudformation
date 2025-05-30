@@ -194,6 +194,12 @@
         "VPCPeeringRequesterSetupStack": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "TemplateURL": {
                     "Fn::Sub": [
                         "https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${S3KeyPrefix}templates/VPCPeering-Requester-Setup.cfn.yaml",
@@ -232,6 +238,12 @@
         "VPCPeeringUpdatesStack": {
             "Type": "AWS::CloudFormation::Stack",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "TemplateURL": {
                     "Fn::Sub": [
                         "https://${S3Bucket}.s3.${S3Region}.${AWS::URLSuffix}/${S3KeyPrefix}templates/VPCPeering-Updates.cfn.yaml",

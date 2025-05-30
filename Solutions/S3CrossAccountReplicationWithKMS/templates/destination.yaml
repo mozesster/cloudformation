@@ -34,6 +34,9 @@ Resources:
               - kms:GenerateDataKey*
               - kms:DescribeKey
             Resource: '*'
+      Tags:
+        - Key: git_org
+          Value: mozesster
 
   # Create a KMS Key alias.
   KmsKeyAlias:
@@ -67,6 +70,9 @@ Resources:
         RestrictPublicBuckets: true
       VersioningConfiguration: # Versioning must be enabled for replication.
         Status: Enabled
+      Tags:
+        - Key: git_org
+          Value: mozesster
 
   # S3 Bucket Policy to allow replication from source account.
   S3BucketDestinationPolicy:

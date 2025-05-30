@@ -142,6 +142,10 @@
                         "Value": {
                             "Ref": "PeerName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             }

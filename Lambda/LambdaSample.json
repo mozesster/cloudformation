@@ -19,6 +19,12 @@
         "LambdaRole": {
             "Type": "AWS::IAM::Role",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "RoleName": "lambda-role",
                 "AssumeRolePolicyDocument": {
                     "Statement": [
@@ -48,6 +54,12 @@
         "LambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "guard": {
                     "SuppressedRules": [
                         "LAMBDA_INSIDE_VPC",

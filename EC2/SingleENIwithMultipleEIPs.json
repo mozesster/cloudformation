@@ -11,12 +11,24 @@
         "EIP1": {
             "Type": "AWS::EC2::EIP",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Domain": "vpc"
             }
         },
         "EIP2": {
             "Type": "AWS::EC2::EIP",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Domain": "vpc"
             }
         },
@@ -81,6 +93,12 @@
         "ENI": {
             "Type": "AWS::EC2::NetworkInterface",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "SecondaryPrivateIpAddressCount": 2,
                 "SourceDestCheck": true,
                 "SubnetId": {

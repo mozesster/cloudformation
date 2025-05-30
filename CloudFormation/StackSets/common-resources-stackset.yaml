@@ -34,3 +34,6 @@ Resources:
         Enabled: true
         RetainStacksOnAccountRemoval: true
       StackSetName: common-resources
+      Tags:
+        - Key: git_org
+          Value: mozesster

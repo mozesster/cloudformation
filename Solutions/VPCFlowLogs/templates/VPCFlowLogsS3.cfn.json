@@ -183,6 +183,10 @@
                     {
                         "Key": "Name",
                         "Value": "VPC Flow Logs S3"
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             }
@@ -190,6 +194,12 @@
         "VPCFlowLogsBucket": {
             "Type": "AWS::S3::Bucket",
             "Metadata": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "guard": {
                     "SuppressedRules": [
                         "S3_BUCKET_SERVER_SIDE_ENCRYPTION_ENABLED",

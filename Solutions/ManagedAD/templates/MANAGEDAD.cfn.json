@@ -301,6 +301,10 @@
                         "Value": {
                             "Fn::Sub": "${AWSManagedADDomainNetBiosName}-DomainMembersSG-AWSManagedAD"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             },
@@ -369,6 +373,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "Policies": [
@@ -491,6 +499,12 @@
         "AWSManagedADLinuxEC2SeamlessDomainJoinSecret": {
             "Type": "AWS::SecretsManager::Secret",
             "Properties": {
+                "Tags": [
+                  {
+                    "Key": "git_org",
+                    "Value": "mozesster"
+                  }
+                ],
                 "Name": {
                     "Fn::Sub": "aws/directory-services/${AWSManagedAD}/seamless-domain-join"
                 },
@@ -575,6 +589,10 @@
                         "Value": {
                             "Ref": "AWS::StackName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ],
                 "Policies": [
@@ -671,6 +689,10 @@
                         "Value": {
                             "Ref": "AWSManagedADDomainDNSName"
                         }
+                    },
+                    {
+                        "Key": "git_org",
+                        "Value": "mozesster"
                     }
                 ]
             },
